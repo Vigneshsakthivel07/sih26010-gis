@@ -9,7 +9,7 @@ def calculate_affine_transform(source_points, target_points):
         Historical FMB coordinates
 
     target_points:
-        Modern projected coordinates
+        Modern projected survey coordinates
     """
 
     A = []
@@ -26,12 +26,20 @@ def calculate_affine_transform(source_points, target_points):
     A = np.array(A)
     B = np.array(B)
 
-    params, _, _, _ = np.linalg.lstsq(A, B, rcond=None)
+    params, _, _, _ = np.linalg.lstsq(
+        A,
+        B,
+        rcond=None
+    )
 
     return params
 
 
 def transform_point(point, params):
+    """
+    Transform one FMB point into
+    modern survey coordinates.
+    """
 
     x, y = point
 

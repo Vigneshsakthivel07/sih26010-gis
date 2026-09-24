@@ -1,12 +1,17 @@
 import pandas as pd
+
 from src.transform.projection import gps_to_local
 
 
 def load_survey_csv(file_path):
+    """
+    Load modern survey GPS coordinates
+    and convert them into projected coordinates.
+    """
 
     df = pd.read_csv(file_path)
 
-    projected_points = []
+    points = {}
 
     for _, row in df.iterrows():
 
@@ -15,10 +20,9 @@ def load_survey_csv(file_path):
             row["longitude"]
         )
 
-        projected_points.append({
-            "point_id": row["point_id"],
-            "x": x,
-            "y": y
-        })
+        points[row["point_id"]] = (
+            x,
+            y
+        )
 
-    return pd.DataFrame(projected_points)
+    return points
