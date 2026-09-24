@@ -26,12 +26,11 @@ modern_points = load_survey_csv(
     "data/survey/modern_survey_mismatch.csv"
 )
 
-
 # --------------------------------------------------
 # 3. Select stable control points
 # --------------------------------------------------
 
-control_ids = ["A", "B", "C"]
+control_ids = ["A", "C", "G"]
 
 source_control_points = [
     fmb_points[point_id]
