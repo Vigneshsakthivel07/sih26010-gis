@@ -1,0 +1,30 @@
+{
+    "status": "VERIFIED",
+    "maximum_deviation": 0.0,
+    "average_deviation": 0.0,
+    "overlap_percentage": 100.0,
+    "points_outside": 0,
+    "deviation_ok": true,
+    "overlap_ok": true,
+    "points_ok": true,
+    "deviations": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0,
+        "E": 0.0,
+        "F": 0.0,
+        "G": 0.0,
+        "H": 0.0
+    },
+    "point_results": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true,
+        "E": true,
+        "F": true,
+        "G": true,
+        "H": true
+    }
+}
