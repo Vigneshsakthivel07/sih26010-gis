@@ -1,0 +1,13 @@
+measurement_id,value,unit,x,y,ocr_confidence,color,orientation,boundary_distance_px,status
+M1,20.6,m,599,111,96.0,blue,original,143.2,CANDIDATE
+M2,57.6,m,1220,130,96.0,blue,original,54.2,CANDIDATE
+M3,5.6,m,1075,164,94.0,blue,cw,106.2,CANDIDATE
+M4,74.4,m,1385,567,86.0,blue,cw,305.7,CANDIDATE
+M5,63.4,m,789,797,95.0,blue,cw,270.5,CANDIDATE
+M6,5.4,m,575,1214,95.0,blue,original,23.5,CANDIDATE
+M7,23.2,m,766,1226,96.0,blue,original,22.5,CANDIDATE
+M8,6.0,m,1710,1272,83.0,gray,original,29.5,CANDIDATE
+M9,28.6,m,720,1326,96.0,blue,original,75.7,CANDIDATE
+M10,36.0,m,672,1346,96.0,blue,cw,38.8,CANDIDATE
+M11,89.4,m,1926,1626,93.0,blue,cw,238.7,CANDIDATE
+M12,30.2,m,706,1788,96.0,blue,cw,269.5,CANDIDATE

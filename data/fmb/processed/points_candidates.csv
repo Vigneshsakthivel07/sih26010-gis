@@ -1,0 +1,10 @@
+point_id,x,y,source,confidence,supporting_intersections,status
+P1,553.86,1251.37,fmb_image_intersection,,6,CANDIDATE
+P2,1621.07,103.93,fmb_image_intersection,,3,CANDIDATE
+P3,1641.62,335.0,fmb_image_intersection,,6,CANDIDATE
+P4,1628.6,188.58,fmb_image_intersection,,3,CANDIDATE
+P5,962.58,1277.47,fmb_image_intersection,,4,CANDIDATE
+P6,1774.81,1319.0,fmb_image_intersection,,4,CANDIDATE
+P7,630.85,1257.09,fmb_image_intersection,,3,CANDIDATE
+P8,1691.54,1319.0,fmb_image_intersection,,4,CANDIDATE
+P9,637.83,1300.0,fmb_image_intersection,,1,CANDIDATE
