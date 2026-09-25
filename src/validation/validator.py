@@ -1,4 +1,4 @@
-from src.geometry.fmb import load_fmb_csv
+from src.geometry.fmb import load_fmb_csv, load_digitized_fmb_csv
 from src.geometry.survey import load_survey_csv
 from src.geometry.polygon import polygon_from_point_dict, create_point
 
@@ -16,8 +16,11 @@ def validate_parcel_from_files(
     survey_file,
     control_ids,
     tolerance=1.0,
-    minimum_overlap=90.0
+    minimum_overlap=90.0,
+    digitized_fmb=False
 ):
+
+
     """
     Complete GIS validation pipeline.
 
@@ -47,8 +50,10 @@ def validate_parcel_from_files(
     # ------------------------------------------
     # 1. Load historical FMB
     # ------------------------------------------
-
-    fmb_points = load_fmb_csv(fmb_file)
+    if digitized_fmb:
+         fmb_points = load_digitized_fmb_csv(fmb_file)
+    else:
+   	 fmb_points = load_fmb_csv(fmb_file)
 
     # ------------------------------------------
     # 2. Load modern survey

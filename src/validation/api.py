@@ -6,8 +6,10 @@ def validate_land_parcel(
     survey_file,
     control_ids=None,
     tolerance=1.0,
-    minimum_overlap=90.0
+    minimum_overlap=90.0,
+    digitized_fmb=False
 ):
+
     """
     Public interface for the GIS validation module.
 
@@ -22,7 +24,8 @@ def validate_land_parcel(
         survey_file=survey_file,
         control_ids=control_ids,
         tolerance=tolerance,
-        minimum_overlap=minimum_overlap
+        minimum_overlap=minimum_overlap,
+        digitized_fmb=digitized_fmb
     )
 
     return {
