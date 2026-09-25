@@ -73,20 +73,46 @@ def test_boundary_graph_with_real_fmb():
     print("--- CLUSTERED VERTICES ---")
 
     for vertex in graph["vertices"]:
-       print(
-          f"{vertex.id}: "
-          f"({vertex.x:.1f}, {vertex.y:.1f}) "
-          f"support={vertex.support} "
-          f"lines={vertex.connected_lines}"
-       )
+        print(
+            f"{vertex.id}: "
+            f"({vertex.x:.1f}, {vertex.y:.1f}) "
+            f"support={vertex.support} "
+            f"lines={vertex.connected_lines} "
+            f"edges={vertex.connected_edges}"
+        )
 
     # ---------------------------------------------------------
-    # STEP 6: Basic validation
+    # STEP 6: Print boundary edges
+    # ---------------------------------------------------------
+    print()
+    print("--- BOUNDARY EDGES ---")
+
+    for edge in graph["edges"]:
+        print(
+            f"{edge.id}: "
+            f"{edge.start_vertex} -> {edge.end_vertex} "
+            f"length={edge.length_px:.1f} "
+            f"angle={edge.angle:.1f} "
+            f"lines={edge.line_ids} "
+            f"status={edge.status}"
+        )
+
+    # ---------------------------------------------------------
+    # STAGE 2 SUMMARY
+    # ---------------------------------------------------------
+    print()
+    print("========== STAGE 2 ==========")
+
+    print("Boundary edges:", summary["edges"])
+
+    # ---------------------------------------------------------
+    # STEP 7: Basic validation
     # ---------------------------------------------------------
     assert len(lines) > 0
     assert len(graph["lines"]) > 0
     assert len(graph["intersections"]) > 0
     assert len(graph["vertices"]) > 0
+    assert len(graph["edges"]) > 0
 
     print()
     print("==============================")
